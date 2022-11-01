@@ -28,7 +28,7 @@ const nuevoModulo = 21 % 5 === 1;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-  return str="str"
+  return str
 }
 
 function suma(x, y) {
@@ -117,13 +117,25 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if(num%2===0){
+    return true
+  } else {
+    return false
+  }
 }
 
 function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
+
+  if (num%2!=0){
+    return true
+  }else{
+    return false
+  }
+
+
   
 }
 
@@ -131,37 +143,37 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  
+  return Math.pow(num, 2)
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  
+  return Math.pow(num, 3)
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  
+  return Math.pow(num,exponent)
 }
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  
+  return Math.round(num)
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  
+  return Math.ceil(num)
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  
+  return Math.random(numeroRandom)
 }
 
 function esPositivo(numero) {
@@ -169,20 +181,31 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  
+  Math.round(numero)
+  if (numero>0){
+  return "Es positivo"
+} if (numero<0){ 
+return "Es negativo"
+} if (numero===0){
+return false
+}
+
 }
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
+    return str+"!"
 }
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  
+ 
+  return nombre+" "+apellido
+
 }
 
 function obtenerSaludo(nombre) {
@@ -190,11 +213,15 @@ function obtenerSaludo(nombre) {
   // "Martin" -> "Hola Martin!"
   // Tu código:
   
+  return "Hola " +nombre+"!"
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
+
+    
+    return alto*ancho
   
 }
 
@@ -203,12 +230,18 @@ function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
   
+ 
+  return lado*4
+
 }
 
 
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
+
+ 
+    return base*altura/2
 
 }
 
@@ -217,6 +250,8 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
+
+  return euro*1.20/1 
   
 }
 
@@ -228,7 +263,18 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
   
-}
+  if(letra.length>1) { 
+    return "Dato incorrecto"
+  }
+
+  if(letra==="a"||letra==="e"||letra==="i"||letra==="o"||letra==="u"||letra==="A"||letra==="E"||letra==="I"||letra==="O"||letra==="U") { 
+     return "Es vocal"
+    }
+  
+return "Dato incorrecto"
+  }
+
+
 
 
 
